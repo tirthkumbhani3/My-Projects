@@ -1,0 +1,815 @@
+body {
+    color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: rgb(231, 227, 227);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #8a877b;
+}
+
+a.active {
+    color: #838379;
+}
+
+/* Home Page */
+
+.home-page {
+    background-color: #292a2b;
+    position: relative;
+    min-height: 80vh;
+    overflow: scroll;
+    color: white;
+}
+
+.heroes {
+    align-items: center;
+    color: rgb(240, 234, 234);
+    width: auto;
+}
+
+.heroes h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 33px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heroes p {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0 0px 10px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-content {
+    max-width: 100%;
+    line-height: 1.3;
+    padding: 10px;
+    font-size: 1.0em;
+    margin: 20px;
+}
+
+.main-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.slider-container {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.active {
+    display: block;
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: rgba(235, 221, 221, 0.7);
+    color: black;
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+.arrow:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+.membership-deals {
+    display: flex;
+    justify-content: space-around;
+    align-items: normal;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding: 0px;
+    margin: 20px 0;
+    font-size: 1.2em;
+
+}
+
+.deal-card {
+    margin: 20px auto;
+    min-height: 300px;
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 350px;
+    /* semi-transparent background */
+    color: #fff;
+    padding: 80px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 1250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.deal-card .deal-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* dark overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.deal-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.deal-card a::before {
+    content: "➤ ";
+}
+
+.deal-card a:hover {
+    background: linear-gradient(to right, #0077ff, #00aaff);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    transform: scale(1.05);
+}
+
+.btn {
+    background-color: #4c5152;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 21px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.0em;
+    display: inline-block;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #6c6f70;
+    transform: scale(1.05);
+    transition: background-color 0.3s, transform 0.3s;
+}
+/*home page end*/
+
+/* About Page */
+
+.about-page {
+    position: relative;
+    min-height: 100vh;
+    overflow: scroll;
+    color: white;
+}
+
+.about-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(8px);
+    z-index: -1;
+    opacity: 0.9;
+}
+
+
+.about-page::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* dark transparent overlay */
+    z-index: -1;
+}
+
+.about-page {
+    background-image: url('image/3d-gym-equipment.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-section {
+    color: #fff;
+    padding: 30px 30px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    color: #eaeed4;
+    line-height: 1.6;
+    padding: 20px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.hero {
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    padding-top: 30px;
+    unicode-bidi: isolate;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-content p {
+    text-align: justify;
+    margin: auto;
+    padding: 10px 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+
+}
+
+
+/*about page end*/
+
+
+.footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+
+
+}
+
+::marker {
+    color: #e3f771;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*program page*/
+
+.programs-page {
+    background-image: url('image/img5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Programs Page Background Blur */
+    position: relative;
+    min-height: 100vh;
+    overflow: scroll;
+    color: white;
+}
+
+.programs-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(8px);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.programs-page::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Dark overlay */
+    z-index: -1;
+}
+
+.section1 {
+    padding: 60px 30px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.section1 h2 {
+    color: #dfeaec;
+}
+
+.section2 {
+    font-size: 20px;
+    padding: 21px 30px 100px 31px;
+
+}
+
+.program-card {
+    margin: 20px;
+    padding: 5px;
+}
+
+
+/* program page end*/
+
+/* Membership Page */
+
+.membership-page {
+    background-image: url('image/img4.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    color: white;
+    min-height: 90vh;
+    position: relative;
+    height: 100vh;
+}
+
+.membership-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(8px);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.membership-page::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Dark overlay */
+    z-index: -1;
+}
+
+.membership-plans {
+    padding: 10px 50px;
+    margin: 20px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #fff;
+}
+
+.membership-plans h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+.membership-plans p {
+    font-size: 1.3em;
+    line-height: 2;
+}
+
+.membership-plans .basic-plan,
+.membership-plans .standard-plan,
+.membership-plans .premium-plan {
+    border: 2px solid #7d8072;
+    border-radius: 50px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(236, 7, 7, 0.2);
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.membership-plans .basic-plan:hover,
+.membership-plans .standard-plan:hover,
+.membership-plans .premium-plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(248, 247, 247, 0.3);
+
+}
+
+.membership-plans .basic-plan h2,
+.membership-plans .standard-plan h2,
+.membership-plans .premium-plan h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.membership-plans .basic-plan ul,
+.membership-plans .standard-plan ul,
+.membership-plans .premium-plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.8;
+
+}
+
+.membership-plans .basic-plan ul li,
+.membership-plans .standard-plan ul li,
+.membership-plans .premium-plan ul li {
+    margin-bottom: 8px;
+    color: #c0c1c5;
+    font-weight: bold;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+
+.membership-plans .basic-plan button,
+.membership-plans .standard-plan button,
+.membership-plans .premium-plan button {
+    background-color: #4c5152;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.membership-plans .basic-plan button:hover,
+.membership-plans .standard-plan button:hover,
+.membership-plans .premium-plan button:hover {
+    background-color: #6c6f70;
+    transform: scale(1.05);
+}
+
+/* Membership Page End */
+
+/* Contact-info */
+
+.contact-page {
+    background-image: url('image/img4.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: scroll;
+    /* color: white; */
+    min-height: max-content;
+    position: relative;
+    height: 100vh;
+    /* font-family: 'Poppins', sans-serif; */
+    margin: 0;
+    padding: 0;
+    /* color: #333; */
+}
+
+.contact-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(8px);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.contact-page::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Dark overlay */
+    z-index: -2;
+}
+
+.container {
+    max-width: 1100px;
+    padding: 40px 20px;
+    margin: auto;
+}
+
+.container h1 {
+    text-align: left;
+    color: #dde0e9;
+    margin-bottom: 40px;
+    margin-left: 100px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+form {
+    margin-right: 50%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+
+    border: 1px solid #080808;
+    border-radius: 8px;
+    background-color: rgb(160, 156, 156);
+}
+
+input::placeholder {
+    color: #111;
+    width: 200px;
+}
+
+.contact-form button {
+    background: #3a3d47;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #74757a;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    margin: 12px;
+    color: rgb(226, 216, 216);
+    font-size: large;
+}
+
+h4 {
+    font-size: 30px;
+    padding: 10px 15px 22px 0px;
+
+}
+
+.contact-info p {
+    font-size: medium;
+    padding: 12px 49px 2px 22px;
+}
+
+h5 {
+    color: #f3f0f0;
+    padding: 10px 0;
+    font-size: 24px;
+}
+
+.map {
+    flex: 1;
+    min-width: 300px;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.social-icons {
+    padding: 10px;
+    margin: 2px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Contact-info end */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links ul {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .slider-container {
+        height: 60vh;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .heroes h1 {
+        font-size: 2em;
+    }
+
+    .heroes p {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .membership-deals {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .deal-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .membership-plans {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .map iframe {
+        height: 200px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo span {
+        font-size: 1.2em;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

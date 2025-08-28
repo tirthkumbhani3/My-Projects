@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitNation Gym</title>
+
+  <link rel="stylesheet" href="bootstrap v4/bootstrap.min.css">
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="image/logo.ico" type="image/x-icon">
+
+  <!-- SEO Meta Description -->
+  <meta name="description"
+    content="FitNation Gym: Top-notch gym offering personal training, cardio, strength training, and nutrition services.">
+</head>
+
+<body class="home-page">
+  <!-- Header with Logo and Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="image/gym1.png" alt="FitNation Gym Logo">
+      <span>FitNation Gym</span>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="membership.html">Membership plan</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Main Content Area -->
+  <main>
+    <div class="slider-container">
+      <img src="image/img1.jpg" alt="image 1" class="mySlides">
+      <img src="image/img2.jpg" alt="image 2" class="mySlides">
+      <img src="image/img3.jpg" alt="image 3" class="mySlides">
+      <img src="image/img4.jpg  " alt="image 4" class="mySlides">
+      <img src="image/img5.jpg" alt="image 5" class="mySlides">
+
+      <span class="arrow left" onclick="plusSlides(-1)">&#10094;</span>
+      <span class="arrow right" onclick="plusSlides(1)">&#10095;</span>
+
+    </div>
+    <!-- Hero Section -->
+    <section class="heroes">
+      <h1>Welcome to FitNation Gym</h1>
+      <p>Your Fitness, Our Passion</p>
+      <div class="home-content">
+        <p>This is the global hub of our one stop shop for the Fit Nation Collective. We want you to know that whether
+          you are training online through our fitness portal, or fortunate enough to be local to our state of the art
+          facility in Grimsby, Lincolnshire, we are committed to you. &nbsp;So we ask you; what is your health and
+          fitness like? Well regardless of whether you are a complete beginner or an advanced athlete, we will look
+          after you. We transform the lives and health of men and women everyday - it’s our passion.</p>
+      </div>
+    </section>
+
+    <!-- Membership Deals Section -->
+      <div class="membership-deals">
+        <div class="deal-card"
+          style="background-image: url('image/img1.jpg');">
+          <div class="deal-content">
+            <h3 class="deal-title">OUR LATEST MEMBERSHIP DEALS</h3>
+            <a href="membership.html" class="btn " target="_blank"
+              rel="noopener noreferrer">
+              Click here
+            </a>
+          </div>
+        </div>
+        <div class="deal-card"
+          style="background-image: url('https://fitnationglobal.com/wp-content/uploads/2022/12/App__DSC7984-4-1536x1536.jpg');">
+          <div class="deal-content">
+            <h3 class="deal-title">TRAINING &amp; DIET PLANS FROM £9.99</h3>
+            <a href="https://fitnationglobal.com/training-app/" class="btn " target="_blank"
+              rel="noopener noreferrer">
+              Click here
+            </a>
+          </div>
+        </div>
+        <div class="deal-card"
+          style="background-image: url('https://fitnationglobal.com/wp-content/uploads/2022/12/Kave_DSC7455-copy-2048x1638.jpg');">
+          <div class="deal-content">
+            <h3 class="deal-title">ONLINE COACHING</h3>
+            <a href="https://fitnationglobal.com/online-training/" class="btn" target="_blank"
+              rel="noopener noreferrer">
+              Click here
+            </a>
+          </div>
+        </div>
+        <div class="deal-card"
+          style="background-image: url('image/img6.jpg');">
+          <div class="deal-content">
+            <h3 class="deal-title">GYM</h3>
+            <a href="https://fitnationglobal.com/training-app/" class="btn " target="_blank"
+              rel="noopener noreferrer">
+              Click here
+            </a>
+          </div>
+        </div>
+<div class="deal-card"
+          style="background-image: url('image/img7.jpg');">
+          <div class="deal-content">
+            <h3 class="deal-title">PERSONAL TRAINING</h3>
+            <a href="https://fitnationglobal.com/training-app/" class="btn " target="_blank"
+              rel="noopener noreferrer">
+              Click here
+            </a>
+          </div>
+        </div>
+<div class="deal-card"
+          style="background-image: url('image/img8.jpg');">
+          <div class="deal-content">
+            <h3 class="deal-title">STORE</h3>
+            <a href="https://fitnationglobal.com/training-app/" class="btn " target="_blank"
+              rel="noopener noreferrer">
+              Click here
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 FitNation Gym. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("mySlides");
+
+    function showSlide(n) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      slides[n].classList.add("active");
+    }
+
+    function plusSlides(n) {
+      slideIndex += n;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
+
+    // Optional autoplay:
+    setInterval(() => {
+      plusSlides(1);
+    }, 5000);
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowRight") {
+        plusSlides(1);
+      } else if (event.key === "ArrowLeft") {
+        plusSlides(-1);
+      }
+    });
+  </script>
+</body>
+
+</html>
